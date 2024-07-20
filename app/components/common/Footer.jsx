@@ -7,8 +7,11 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.copyright}>
         Copyright &copy; Izoh Creatives.Web designed by
-        <Link href="/" className={styles.designer}>
-          Izoh
+        <Link
+          href="https://izohcreatives.vercel.app/"
+          className={styles.designer}
+        >
+          Izoh Creatives
         </Link>
       </div>
       <Link href="#" className={styles.upBtn}>
