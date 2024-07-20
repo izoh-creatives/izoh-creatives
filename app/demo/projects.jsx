@@ -4,7 +4,7 @@ export const projects = [
     title: "Sasa Fashion",
     description:
       "A fashion dropshipping store.The seller can showcase products and clients can check availability of products before making a purchase.Created using Next Js",
-    link: "https://www.sasafashion.co.ke",
+    link: "https://sasafashion.vercel.app/",
     status: "complete",
   },
   {
