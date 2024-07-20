@@ -12,7 +12,7 @@ export const projects = [
     title: "Izoh Creatives",
     description:
       "My developer portfolio website.I created it to showcase my information,skills,projects and connect with clients and employers.Created using Next Js",
-    link: "https://izoh-creatives.vercel.app/",
+    link: "https://izohcreatives.vercel.app/",
     status: "complete",
   },
   {
