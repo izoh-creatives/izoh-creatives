@@ -1,0 +1,27 @@
+@import "./variables.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $dark;
+  padding: 14px 18px;
+  .designer {
+    color: $red;
+    margin-left: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .upBtn {
+    background: transparent;
+    color: $white;
+    border: 1px solid $red;
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 9px;
+    &:hover {
+      color: $red;
+    }
+  }
+}

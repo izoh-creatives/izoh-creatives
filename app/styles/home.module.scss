@@ -1,0 +1,574 @@
+//Imports
+@import "./variables.scss";
+
+//Image animation
+@keyframes imageAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+    box-shadow: 0 0 40px grey;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//Header
+.header {
+  height: 510px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+  border-bottom: 1px solid $dark;
+  .content {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 0 90px 45px 30px;
+    .title {
+      font-size: 36px;
+    }
+    .subtitle {
+      font-size: 23px;
+      color: $red;
+    }
+    .description {
+      line-height: 30px;
+      opacity: 0.8;
+      text-align: justify;
+    }
+  }
+  .image {
+    flex: 1;
+    padding-top: 80px;
+    .img {
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 25px grey;
+      animation: imageAnimation 3s infinite;
+    }
+  }
+}
+//Services
+.services {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 5px 25px;
+    .service {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background: $dark;
+      border-radius: 3px;
+      padding: 30px;
+      .title {
+        font-size: 17px;
+        letter-spacing: 0.9px;
+        color: $red;
+      }
+      .description {
+        line-height: 35px;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+//Technologies
+.myTechnologies {
+  background: $red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+  .title {
+    font-size: 24px;
+  }
+  .technologies {
+    width: 100%;
+    height: 160px;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: $red;
+    .technology {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .title {
+        font-size: 15px;
+      }
+    }
+  }
+}
+//Projects
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  .projectsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 10px 25px;
+    .project {
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      background: $dark;
+      border: 1px solid $dark;
+      border-radius: 3px;
+      transition: 1.2s;
+      &:hover {
+        border: 1px dotted $red;
+      }
+      .img {
+        width: 100%;
+        height: 55%;
+        min-height: 55%;
+        object-fit: cover;
+        object-position: top;
+        border-radius: 3px 3px 0 0;
+        opacity: 0.9;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 9px;
+        .title {
+          font-size: 13px;
+          font-weight: 550;
+        }
+        .description {
+          font-size: 11px;
+          line-height: 30px;
+          text-align: justify;
+          opacity: 0.7;
+        }
+        .link {
+          width: fit-content;
+          background: $black;
+          color: $red;
+          text-align: center;
+          border-radius: 3px;
+          font-size: 10px;
+          font-weight: 550;
+          cursor: pointer;
+          transition: 1s;
+          padding: 11px 12px;
+          &:hover {
+            background: $red;
+            color: $white;
+          }
+        }
+        .disabledLink {
+          &:hover {
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+//Pricing
+.pricing {
+  padding: 45px 35px 0;
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .package {
+      height: 510px;
+      background: $black;
+      border: 1px solid $dark;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      transition: 1.2s;
+      &:hover {
+        border: 1px dotted $red;
+      }
+      .header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $red;
+        border-radius: 5px 5px 0 0;
+        padding: 17px 14px;
+        .title {
+          font-size: 21px;
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 27px;
+        .price {
+          font-size: 21px;
+          opacity: 0.7;
+        }
+        .features {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          .feature {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            opacity: 0.8;
+            .icon {
+              width: 18px;
+              height: 18px;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      .btn {
+        background: transparent;
+        font-size: 11px;
+        font-weight: 400;
+        color: $white;
+        border: 1px solid $dark;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 1.2s;
+        padding: 10px;
+        margin-bottom: 20px;
+        &:hover {
+          color: $red;
+          border-color: $red;
+        }
+      }
+    }
+  }
+}
+//Contacts
+.contacts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  .contactOptions {
+    display: flex;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .detail {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .text {
+          font-size: 13px;
+          opacity: 0.8;
+        }
+      }
+    }
+    .contactForm {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }
+}
+
+//Responsive
+@media screen and (max-width: 1153px) {
+  //Header
+  .header {
+    gap: 50px;
+    padding: 0;
+    .content {
+      width: 100%;
+      padding-right: 0;
+    }
+    .image {
+      text-align: right;
+      padding-right: 20px;
+      .img {
+        width: 330px;
+        height: 330px;
+      }
+    }
+  }
+  //Services
+  .services {
+    .list {
+      gap: 12px;
+      padding: 5px 10px;
+      .service {
+        padding: 20px 12px;
+        .description {
+          font-size: 11px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+  //Projects
+  .projects {
+    .projectsList {
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  //Pricing
+  .pricing {
+    padding: 40px 10px 0;
+    .packages {
+      gap: 16px;
+    }
+  }
+  //Contacts
+  .contacts {
+    .contactOptions {
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  //Header
+  .header {
+    gap: 30px;
+    .content {
+      flex: 2;
+      max-width: 55%;
+    }
+    .image {
+      .img {
+        width: 290px;
+        height: 290px;
+      }
+    }
+  }
+  //Services
+  .services {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 13px;
+      .service {
+        height: 260px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  //Projects
+  .projects {
+    .projectsList {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 30px;
+      padding: 10px 15px;
+    }
+  }
+  //Pricing
+  .pricing {
+    padding: 40px 15px 0;
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 25px;
+      row-gap: 40px;
+      .package {
+        .header {
+          .title {
+            font-size: 20px;
+          }
+        }
+        .price {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  //Contacts
+  .contacts {
+    padding-top: 45px;
+    .contactOptions {
+      gap: 15px;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      .details {
+        flex: 1;
+      }
+      .contactForm {
+        flex: 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  //Header
+  .header {
+    height: 450px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .content {
+      max-width: 80%;
+      align-self: flex-start;
+      padding-bottom: 30px;
+    }
+    .image {
+      display: none;
+    }
+  }
+  //Services
+  .services {
+    .list {
+      gap: 10px;
+      padding: 5px;
+    }
+  }
+  //Technologies
+  .myTechnologies {
+    .technologies {
+      height: auto;
+      grid-template-columns: repeat(3, 1fr);
+      .technology {
+        height: 120px;
+      }
+    }
+  }
+  //Projects
+  .projects {
+    .projectsList {
+      column-gap: 10px;
+      padding: 5px;
+      .project {
+        .content {
+          gap: 10px;
+          padding: 9px;
+          .description {
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  //Pricing
+  .pricing {
+    padding: 40px 10px 0;
+    .packages {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 15px;
+    }
+  }
+  //Contacts
+  .contacts {
+    .contactOptions {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  //Header
+  .header {
+    height: 430px;
+    .content {
+      max-width: 98%;
+      row-gap: 15px;
+      padding: 0 8px 25px 18px;
+    }
+  }
+  //Services
+  .services {
+    margin-bottom: 18px;
+    .list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 5px 14px;
+    }
+  }
+  //Projects
+  .projects {
+    .projectsList {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+    }
+  }
+  //Pricing
+  .pricing {
+    padding: 35px 30px 0;
+    .packages {
+      grid-template-columns: 1fr;
+      .package {
+        .header {
+          .title {
+            font-size: 18px;
+          }
+        }
+        .price {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  //Contacts
+  .contacts {
+    .contactOptions {
+      flex-direction: column;
+      row-gap: 50px;
+      padding: 0 12px;
+      margin-bottom: 30px;
+      .details {
+        gap: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  //Header
+  .header {
+    .content {
+      row-gap: 12px;
+      margin-bottom: 30px;
+    }
+  }
+  //Technologies
+  .myTechnologies {
+    .technologies {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
