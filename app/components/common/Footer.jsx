@@ -8,7 +8,7 @@ const Footer = () => {
       <div className={styles.copyright}>
         Copyright &copy; Izoh Creatives.Web designed by
         <Link
-          href="https://izohcreatives.vercel.app/"
+          href="https://www.izohcreatives.co.ke/"
           className={styles.designer}
         >
           Izoh Creatives
