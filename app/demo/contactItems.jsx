@@ -8,7 +8,7 @@ export const contactItems = [
   },
   {
     icon: <Mail />,
-    text: "+info@izohcreatives.co.ke",
+    text: "izohcreatives@gmail.com",
     title: "Email",
   },
   {
