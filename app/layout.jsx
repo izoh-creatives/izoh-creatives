@@ -7,7 +7,17 @@ import { ToastContainer } from "react-toastify";
 
 export const metadata = {
   title: "Izoh Creatives",
-  description: "A passionate web designer and developer",
+  description:
+    "Hey, I am Izoh,a freelance web designer and developer.I can get you a professional website with as little as Ksh 10,000 wherever you are.",
+  openGraph: {
+    title: "Izoh Creatives",
+    description:
+      "Hey, I am Izoh,a freelance web designer and developer.I can get a professional website with as little as Ksh 10,000 wherever you are.",
+    type: "website",
+    locale: "en_us",
+    url: "https://www.izohcreatives.co.ke",
+    siteName: "Izoh creatives",
+  },
 };
 
 export default function RootLayout({ children }) {
