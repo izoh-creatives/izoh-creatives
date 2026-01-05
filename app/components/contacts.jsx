@@ -135,10 +135,7 @@ const Contacts = () => {
           </p>
         )}
         {/* Contact form */}
-        <form
-          onSubmit={handleSubmit}
-          className="w-full flex flex-col items-start space-y-7 contact-form"
-        >
+        <form className="w-full flex flex-col items-start space-y-7 contact-form">
           <div className="w-full flex flex-col lg:flex-row space-y-7 lg:space-x-4 lg:space-y-0">
             <input
               type="text"
@@ -182,7 +179,8 @@ const Contacts = () => {
             required
           />
           <button
-            type="submit"
+            type="button"
+            onClick={handleSubmit}
             className="red-bg text-xs rounded-2xl link px-4 py-2 ml-auto hover:scale-[98%] hover:shadow-[0_0_50px] hover:shadow-red-600 smooth-animation"
           >
             Send Message
