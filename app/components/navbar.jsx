@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
 import Logo from "../images/logo.png";
 import { menuItems } from "../data";
@@ -60,15 +61,15 @@ const Navbar = () => {
       {/* Desktop menu */}
       <div className="hidden md:flex items-center space-x-10 pr-8">
         {menuItems.map((menuItem, index) => (
-          <Link
+          <ScrollLink
             key={index}
-            href={menuItem.link}
-            className={`text-xs font-medium ${
+            to={menuItem.link}
+            className={`text-xs font-medium cursor-pointer ${
               pathname == menuItem.link && "text-red-600"
             } hover:scale-[98%] hover:text-red-500 smooth-animation `}
           >
             {menuItem.name}
-          </Link>
+          </ScrollLink>
         ))}
       </div>
       {/* Mobile menu */}
@@ -84,16 +85,16 @@ const Navbar = () => {
           />
           {/* Menu items */}
           {menuItems.map((menuItem, index) => (
-            <Link
+            <ScrollLink
               key={index}
-              href={menuItem.link}
-              className={`text-xs font-medium  ${
+              to={menuItem.link}
+              className={`text-xs font-medium cursor-pointer  ${
                 pathname == menuItem.link && "text-[#121212]"
               } hover:text-[#121212] smooth-animation`}
               onClick={closeMenu}
             >
               {menuItem.name}
-            </Link>
+            </ScrollLink>
           ))}
         </div>
       )}

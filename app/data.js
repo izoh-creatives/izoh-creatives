@@ -29,19 +29,19 @@ import chickenPoster from "./images/chicken-poster.jpg";
 export const menuItems = [
   {
     name: "Home",
-    link: "/",
+    link: "top",
   },
   {
     name: "Services",
-    link: "#services",
+    link: "services",
   },
   {
     name: "My work",
-    link: "#projects",
+    link: "projects",
   },
   {
     name: "Contacts",
-    link: "#contacts",
+    link: "contacts",
   },
 ];
 

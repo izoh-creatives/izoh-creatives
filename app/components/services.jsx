@@ -21,7 +21,7 @@ const Services = () => {
           // Service
           <div
             key={index}
-            className="w-full h-80 sm:h-95 flex flex-col justify-center items-center space-y-6 bg-white/10 backdrop-blur-2xl border border-white/10 rounded-2xl px-4 py-5 sm:px-2 group lg:space-x-6 lg:pt-14 hover:bg-red-700 smooth-animation"
+            className="w-full h-80 sm:h-95 flex flex-col justify-center items-center space-y-6 bg-white/10 backdrop-blur-2xl border border-white/10 rounded-2xl px-3 py-5 sm:px-2 group lg:space-x-6 lg:pt-14 hover:bg-red-700 smooth-animation"
           >
             <div className="w-10 h-10 flex justify-center items-center bg-red-700 rounded-xl p-3 mt-5 group-hover:bg-white group-hover:text-red-700 smooth-animation">
               {service.icon}

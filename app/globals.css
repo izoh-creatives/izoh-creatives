@@ -7,6 +7,10 @@
   --breakpoint-md: 768px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Color variables */
 :root {
   --background: #000000;
