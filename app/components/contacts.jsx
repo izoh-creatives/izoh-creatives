@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import SectionHeading from "./section-heading";
 import { contactInfos } from "../data";
@@ -105,19 +106,21 @@ const Contacts = () => {
         <div className="flex flex-col items-start space-y-8 mb-8">
           {contactInfos.map((contactInfo, index) => (
             // Contact info
-            <div key={index} className="flex items-center space-x-2">
-              {/* Icon */}
-              <div className="w-8.75 h-8.75 flex justify-center items-center rounded-xl bg-red-600 p-2.75">
-                {contactInfo.icon}
+            <Link key={index} href={contactInfo.link}>
+              <div className="flex items-center space-x-2">
+                {/* Icon */}
+                <div className="w-8.75 h-8.75 flex justify-center items-center rounded-xl bg-red-600 p-2.75">
+                  {contactInfo.icon}
+                </div>
+                {/* Content */}
+                <div className="flex flex-col items-start space-y-1.5">
+                  <h5 className="text-xs">{contactInfo.title}</h5>
+                  <p className="text-[11px] lg:text-xs text-white/70">
+                    {contactInfo.text}
+                  </p>
+                </div>
               </div>
-              {/* Content */}
-              <div className="flex flex-col items-start space-y-1.5">
-                <h5 className="text-xs">{contactInfo.title}</h5>
-                <p className="text-[11px] lg:text-xs text-white/70">
-                  {contactInfo.text}
-                </p>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
         {/* Social media icons */}

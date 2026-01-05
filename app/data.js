@@ -33,15 +33,15 @@ export const menuItems = [
   },
   {
     name: "Services",
-    link: "/#services",
+    link: "#services",
   },
   {
     name: "My work",
-    link: "/#projects",
+    link: "#projects",
   },
   {
     name: "Contacts",
-    link: "/#contacts",
+    link: "#contacts",
   },
 ];
 
@@ -165,16 +165,19 @@ export const contactInfos = [
     icon: <PhoneCall />,
     title: "Phone Call",
     text: "+254745780515",
+    link: "tel:+254745780515",
   },
   {
     icon: <MessageCircle />,
     title: "WhatsApp",
     text: "+254745780515",
+    link: "https://wa.me/254745780515",
   },
   {
     icon: <Mail />,
     title: "Email",
     text: "izohcreatives@gmail.com",
+    link: "mailto:izohcreatives@gmail.com",
   },
 ];
 
@@ -183,16 +186,16 @@ export const socialIcons = [
   {
     icon: <Facebook />,
     title: "Facebook",
-    link: "",
+    link: "https://www.facebook.com/izohcreatives",
   },
   {
     icon: <Instagram />,
     title: "Instagram",
-    link: "",
+    link: "https://www.instagram.com/izohcreatives/",
   },
   {
     icon: <Linkedin />,
     title: "Linked In",
-    link: "",
+    link: "https://www.linkedin.com/in/izoh/",
   },
 ];
