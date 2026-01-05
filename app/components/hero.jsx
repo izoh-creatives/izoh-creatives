@@ -19,11 +19,12 @@ const Hero = () => {
           professional photo editing
         </p>
         {/* Button */}
-        <Link href="#contacts">
-          <button className="w-31 flex justify-between items-center bg-red-600 text-xs rounded-4xl px-3.5 py-2 lg:mt-2 group hover:shadow-[0_0_50px] hover:scale-95 hover:shadow-red-600 smooth-animation">
-            Get in touch
-            <ChevronsRight className="w-4 h-6 font-medium smooth-animation" />
-          </button>
+        <Link
+          href="#contacts"
+          className="w-31 flex justify-between items-center bg-red-600 text-xs rounded-4xl px-3.5 py-2 lg:mt-2 group hover:shadow-[0_0_50px] hover:scale-95 hover:shadow-red-600 smooth-animation"
+        >
+          Get in touch
+          <ChevronsRight className="w-4 h-6 font-medium smooth-animation" />
         </Link>
       </div>
     </div>
