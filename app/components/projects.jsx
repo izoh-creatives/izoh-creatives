@@ -23,7 +23,7 @@ const Projects = () => {
     activeProjects.length > 0 && (
       <div
         id="projects"
-        className="flex flex-col space-y-12 pl-3 pr-7 py-8 lg:py-16 sm:pl-1 sm:pr-4 lg:px-8"
+        className="flex flex-col items-center space-y-12 pl-2 pr-5 py-8 lg:py-16 sm:pl-1 sm:pr-4 lg:px-8"
       >
         {/* Heading and buttons */}
         <div className="flex flex-col items-center">

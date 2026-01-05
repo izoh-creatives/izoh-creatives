@@ -4,7 +4,7 @@ import { services } from "../data";
 const Services = () => {
   return (
     <div
-      className="flex flex-col items-center space-y-6 pl-3 pr-7 sm:pl-1.5 sm:pr-5 md:pr-8 pt-10 py-10"
+      className="flex flex-col items-center space-y-6 pl-2 pr-5 sm:pl-1.5 sm:pr-5 md:pr-8 pt-10 py-10"
       id="services"
     >
       {/* Heading and text */}
