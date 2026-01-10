@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div
       id="top"
-      className="w-screen flex justify-between items-center bg-black border border-white/10 py-3"
+      className="w-screen flex justify-between items-center bg-black border-b border-white/10 py-3"
     >
       {/* Logo */}
       <Link href="/">
@@ -61,15 +61,15 @@ const Navbar = () => {
       {/* Desktop menu */}
       <div className="hidden md:flex items-center space-x-10 pr-8">
         {menuItems.map((menuItem, index) => (
-          <ScrollLink
+          <Link
             key={index}
-            to={menuItem.link}
+            href={menuItem.link}
             className={`text-xs font-medium cursor-pointer ${
               pathname == menuItem.link && "text-red-600"
             } hover:scale-[98%] hover:text-red-500 smooth-animation `}
           >
             {menuItem.name}
-          </ScrollLink>
+          </Link>
         ))}
       </div>
       {/* Mobile menu */}
@@ -85,16 +85,16 @@ const Navbar = () => {
           />
           {/* Menu items */}
           {menuItems.map((menuItem, index) => (
-            <ScrollLink
+            <Link
               key={index}
-              to={menuItem.link}
+              href={menuItem.link}
               className={`text-xs font-medium cursor-pointer  ${
                 pathname == menuItem.link && "text-[#121212]"
               } hover:text-[#121212] smooth-animation`}
               onClick={closeMenu}
             >
               {menuItem.name}
-            </ScrollLink>
+            </Link>
           ))}
         </div>
       )}

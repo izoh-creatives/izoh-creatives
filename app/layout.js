@@ -10,7 +10,8 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Izoh Creatives",
-  description: "Home of web and graphics design",
+  description:
+    "I help businesses and individuals get more reach and make more sales through modern web design,graphics design and professional photo editing",
 };
 
 export default function RootLayout({ children }) {

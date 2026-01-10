@@ -4,6 +4,7 @@ import SectionHeading from "./section-heading";
 import { projects, projectCategories } from "../data";
 import CategoryButton from "./category-button";
 import ProjectCard from "./project-card";
+import Link from "next/link";
 
 const Projects = () => {
   // State variables
@@ -14,8 +15,11 @@ const Projects = () => {
   useEffect(() => {
     setProjects(
       activeCategory == ""
-        ? projects
-        : projects.filter((project) => project.category == activeCategory)
+        ? projects.filter((project) => project.featured == true)
+        : projects.filter(
+            (project) =>
+              project.category == activeCategory && project.featured == true
+          )
     );
   }, [activeCategory]);
 
@@ -23,7 +27,7 @@ const Projects = () => {
     activeProjects.length > 0 && (
       <div
         id="projects"
-        className="flex flex-col items-center space-y-12 pl-2 pr-3 py-8 lg:py-16 sm:pl-1 sm:pr-4 lg:px-8"
+        className="flex flex-col items-center space-y-12 pl-2 pr-3 py-8 lg:py-10.5 sm:pl-1 sm:pr-4 lg:px-8"
       >
         {/* Heading and buttons */}
         <div className="flex flex-col items-center">
@@ -50,7 +54,7 @@ const Projects = () => {
           </div>
         </div>
         {/* Projects */}
-        <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4  sm:gap-x-2 md:gap-x-2 lg:gap-x-7 lg:gap-y-20 px-1.5">
+        <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-y-12 xs:gap-x-0.5 md:gap-x-1 xl:gap-x-4 lg:gap-y-20 ">
           {activeProjects
             .filter((project, index) => index <= 7)
             .map((project, index) => (
@@ -58,6 +62,12 @@ const Projects = () => {
               <ProjectCard key={index} project={project} />
             ))}
         </div>
+        {/* View more button */}
+        <Link href="/work">
+          <button className="bg-red-500 text-xs rounded-2xl px-4.5 py-2.25 mt-4 hover:bg-red-700 transition duration-800">
+            View more
+          </button>
+        </Link>
       </div>
     )
   );

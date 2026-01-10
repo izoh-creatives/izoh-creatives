@@ -2,7 +2,7 @@ import Hero from "./components/hero";
 import Services from "./components/services";
 import WhyMe from "./components/why-me";
 import Projects from "./components/projects";
-import Contacts from "./components/contacts";
+import ContactMe from "./components/contact-me";
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <Services />
       <WhyMe />
       <Projects />
-      <Contacts />
+      <ContactMe />
     </div>
   );
 };

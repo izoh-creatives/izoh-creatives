@@ -1,20 +1,9 @@
 @import "tailwindcss";
 @tailwind utilities;
 
-/* Override screen breakpoints */
-@theme {
-  --breakpoint-sm: 600px;
-  --breakpoint-md: 768px;
-}
-
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
-}
-
-/* Color variables */
-:root {
-  --background: #000000;
-  --text-color: #ffffff;
 }
 
 /* General body css */
@@ -22,6 +11,19 @@ body {
   background: var(--background);
   color: var(--text-color);
   overflow-x: hidden;
+}
+
+/* Override screen breakpoints */
+@theme {
+  --breakpoint-xs: 400px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 768px;
+}
+
+/* Color variables */
+:root {
+  --background: #000000;
+  --text-color: #ffffff;
 }
 
 /* Override active inputs browser styles-background and text color */
@@ -32,12 +34,6 @@ input:-webkit-autofill:active,
 input:-webkit-autofill:enabled {
   -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
   -webkit-text-fill-color: #fff !important;
-}
-
-/* General input styles */
-input,
-textarea {
-  @apply outline-none bg-black text-xs text-white/90 rounded-xl cursor-default px-4 py-3  focus:text-white;
 }
 
 /* Buttons and links */
@@ -87,5 +83,10 @@ button,
 /* Contact input */
 .contact-form input,
 .contact-form textarea {
-  @apply w-full bg-black;
+  @apply w-full outline-none bg-white/10 border border-white/10 backdrop-blur-2xl text-xs text-white/90 rounded-xl cursor-default px-4 py-3 focus:text-white;
+}
+
+/* Extra small text */
+.text-xxs {
+  @apply text-[11px];
 }

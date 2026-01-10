@@ -13,6 +13,7 @@ import {
   MessageCircle,
   Pencil,
   PhoneCall,
+  Twitter,
 } from "lucide-react";
 
 // Images
@@ -24,24 +25,27 @@ import newYearImg from "./images/new-year.jpg";
 import worshipInvitation from "./images/worship-invitation.jpg";
 import birthdayInvitation from "./images/birthday-invitation.jpg";
 import chickenPoster from "./images/chicken-poster.jpg";
+import partyInvitation from "./images/party-invitation.jpg";
+import gymDesign from "./images/gym-design.jpg";
+import fashionDesign from "./images/fashion-design.jpg";
 
 // Menu items
 export const menuItems = [
   {
     name: "Home",
-    link: "top",
+    link: "/",
   },
   {
     name: "Services",
-    link: "services",
+    link: "/#services",
   },
   {
     name: "My work",
-    link: "projects",
+    link: "/work",
   },
   {
     name: "Contacts",
-    link: "contacts",
+    link: "/contacts",
   },
 ];
 
@@ -102,60 +106,73 @@ export const projectCategories = [
 // Projects
 export const projects = [
   {
+    image: fashionDesign,
+    category: "graphics-design",
+    title: "Fashion shop promotion post",
+    featured: true,
+  },
+  {
+    image: gymDesign,
+    category: "graphics-design",
+    title: "Gym promotion post design",
+    featured: true,
+  },
+  {
     image: chickenPoster,
     category: "graphics-design",
     title: "Hotel promotion poster",
-    link: "",
+    featured: true,
+  },
+  {
+    image: partyInvitation,
+    category: "graphics-design",
+    title: "Birthday party invitation design",
+    featured: true,
   },
   {
     image: worshipInvitation,
     category: "graphics-design",
     title: "Worship invitation post",
-    link: "",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptas, illo nobis omnis repellat officia nisi ipsam unde",
+    featured: true,
   },
   {
     image: menuImg,
     category: "graphics-design",
     title: "Modern menu design",
-    link: "",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptas, illo nobis omnis repellat officia nisi ipsam unde",
+    featured: true,
   },
   {
     image: dignityImg,
     category: "websites",
     title: "Dignity furniture website",
     link: "https://dignity.co.ke/",
+    featured: true,
   },
   {
     image: vaalImg,
     category: "websites",
     title: "Vaal real estate website",
     link: "https://vaal.co.ke/",
+    featured: true,
   },
   {
     image: newYearImg,
     category: "graphics-design",
     title: "New year instagram post",
-    link: "",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptas, illo nobis omnis repellat officia nisi ipsam unde",
+    featured: true,
   },
   {
     image: birthdayInvitation,
     category: "graphics-design",
     title: "Birthday invitation poster",
-    link: "",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptas, illo nobis omnis repellat officia nisi ipsam unde",
+    featured: true,
   },
   {
     image: sabaiImg,
     category: "websites",
     title: "Sabai welness spa website",
     link: "https://sabaiwellnessspa.com/",
+    featured: true,
   },
 ];
 
