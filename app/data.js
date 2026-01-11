@@ -28,6 +28,14 @@ import chickenPoster from "./images/chicken-poster.jpg";
 import partyInvitation from "./images/party-invitation.jpg";
 import gymDesign from "./images/gym-design.jpg";
 import fashionDesign from "./images/fashion-design.jpg";
+import coachingPoster from "./images/coaching-poster.jpg";
+import weddingCollage from "./images/wedding-collage.jpg";
+import fashionCollage from "./images/fashion-collage.jpg";
+import propertyFlyer from "./images/property-flyer.jpg";
+import photoCollage from "./images/photo-collage.jpg";
+import makeupPoster from "./images/makeup-poster.jpg";
+import beautyBanner from "./images/beauty-banner.jpg";
+import beautyThumbnail from "./images/beauty-thumbnail.jpg";
 
 // Menu items
 export const menuItems = [
@@ -106,15 +114,65 @@ export const projectCategories = [
 // Projects
 export const projects = [
   {
+    image: chickenPoster,
+    category: "graphics-design",
+    title: "Hotel promotion poster",
+    featured: true,
+  },
+  {
     image: fashionDesign,
     category: "graphics-design",
-    title: "Fashion shop promotion post",
+    title: "Fashion shop promotion poster",
+    featured: true,
+  },
+  {
+    image: weddingCollage,
+    category: "graphics-design",
+    title: "Happy wedding photo collage",
+    featured: true,
+  },
+  {
+    image: photoCollage,
+    category: "graphics-design",
+    title: "Simple fashion photo collage",
+    featured: true,
+  },
+  {
+    image: coachingPoster,
+    category: "graphics-design",
+    title: "Coaching classes promotion poster",
+    featured: true,
+  },
+  {
+    image: propertyFlyer,
+    category: "graphics-design",
+    title: "Modern real estate flyer",
     featured: true,
   },
   {
     image: gymDesign,
     category: "graphics-design",
     title: "Gym promotion post design",
+    featured: true,
+  },
+  {
+    image: vaalImg,
+    category: "websites",
+    title: "Vaal real estate website",
+    link: "https://vaal.co.ke/",
+    featured: true,
+  },
+  {
+    image: beautyBanner,
+    category: "graphics-design",
+    title: "Beauty shop offer banner",
+    featured: true,
+  },
+  {
+    image: vaalImg,
+    category: "websites",
+    title: "Vaal real estate website",
+    link: "https://vaal.co.ke/",
     featured: true,
   },
   {
@@ -140,6 +198,12 @@ export const projects = [
     category: "graphics-design",
     title: "Modern menu design",
     featured: true,
+  },
+  {
+    image: beautyThumbnail,
+    category: "graphics-design",
+    title: "Make up tutorial youtube thumbnail",
+    featured: false,
   },
   {
     image: dignityImg,
@@ -173,6 +237,18 @@ export const projects = [
     title: "Sabai welness spa website",
     link: "https://sabaiwellnessspa.com/",
     featured: true,
+  },
+  {
+    image: fashionCollage,
+    category: "graphics-design",
+    title: "Fashion sale photo collage",
+    featured: false,
+  },
+  {
+    image: makeupPoster,
+    category: "graphics-design",
+    title: "Make up artist promotion poster",
+    featured: false,
   },
 ];
 
